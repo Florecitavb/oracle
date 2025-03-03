@@ -1,11 +1,12 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #fd4b8f;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button-hover: #e520b4;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    
 }
 
 /* Estilos generales */
@@ -17,7 +18,11 @@
 
 body {
     height: 100vh;
-    background-color: var(--color-primary);
+   background-color: var(--color-primary);
+   background: linear-gradient(to right, #ad10bb, #eebfd6); /* Degradado lineal de izquierda a derecha */
+   height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+   margin: 0; /* Elimina el margen predeterminado del body */
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,11 +103,12 @@ body {
     flex: 1;
     padding: 10px 15px;
     font-size: 16px;
-    border: 2px solid #333;
+    border: 2px solid #333333;
     border-right: none;
     border-radius: 25px 0 0 25px;
     font-family: "Merriweather", serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
 }
 
 /* Estilos de botón */
@@ -130,14 +136,14 @@ button {
 ul {
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin: 20px 0;
 }
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #df05c2;
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -160,4 +166,20 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+/* Estilos para la imagen friend.webp */
+img[src="assets/friend.webp"] {
+    width: 150px; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Redondea las esquinas de la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    border: 2px solid #ccc; /* Añade un borde alrededor de la imagen */
+    margin: 20px; /* Espacio alrededor de la imagen */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave */
+}
+
+/* Efecto al pasar el ratón sobre la imagen */
+img[src="assets/friend.webp"]:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al pasar el ratón */
 }

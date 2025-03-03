@@ -1,6 +1,4 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-
-/ Array para almacenar los nombres de los amigos
+// Array para almacenar los nombres de los amigos
 let amigos = [];
 
 // Función para agregar un amigo a la lista
@@ -35,7 +33,7 @@ function agregarAmigo() {
     inputAmigo.value = "";
 }
 
-// Función para sortear a los amigos secretos
+// Función para sortear a un solo amigo secreto
 function sortearAmigo() {
     // Verificar si hay suficientes amigos para hacer el sorteo
     if (amigos.length < 2) {
@@ -43,24 +41,17 @@ function sortearAmigo() {
         return;
     }
 
-    // Crear una copia del array para no modificar el original
-    const amigosCopy = [...amigos];
-    const resultados = [];
+    // Seleccionar un amigo aleatorio de la lista
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
 
-    // Asignar un amigo secreto de forma aleatoria
-    while (amigosCopy.length > 0) {
-        const amigo = amigosCopy.pop(); // Sacar un amigo de la lista
-        const indiceAleatorio = Math.floor(Math.random() * amigosCopy.length);
-        const amigoSecreto = amigosCopy.splice(indiceAleatorio, 1)[0]; // Seleccionar al azar y eliminarlo de la lista
-        resultados.push(`${amigo} -> ${amigoSecreto}`); // Guardar la relación de amigo a amigo secreto
-    }
-
-    // Mostrar los resultados del sorteo
+    // Mostrar el resultado en un mensaje
     const resultadoList = document.getElementById("resultado");
-    resultadoList.innerHTML = ""; // Limpiar los resultados anteriores
-    resultados.forEach(result => {
-        const li = document.createElement("li");
-        li.textContent = result;
-        resultadoList.appendChild(li);
-    });
+    resultadoList.innerHTML = ""; // Limpiar resultados anteriores
+    const mensajeResultado = `El amigo sorteado es: ${amigoSorteado}`;
+    
+    const li = document.createElement("li");
+    li.textContent = mensajeResultado;
+    resultadoList.appendChild(li);
 }
+
