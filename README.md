@@ -21,6 +21,7 @@ Este programa te permite escribir el nombre de varios amigos, hacer un sorteo y 
 2️⃣ Abrir el archivo index.html en el navegador
 
 [![index](https://github.com/Florecitavb/oracle/blob/master/img/open.png?raw=true "index")](https://github.com/Florecitavb/oracle/blob/master/img/open.png?raw=true "index")
+
 3️⃣ Se muestra la interfaz
 
 [![interfaz](https://github.com/Florecitavb/oracle/blob/master/img/interface.png?raw=true "interfaz")](https://github.com/Florecitavb/oracle/blob/master/img/interface.png?raw=true "interfaz")
